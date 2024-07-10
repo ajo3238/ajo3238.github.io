@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        input[type=submit] {
+            background-color: blue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+    </style>
+</head>
+<body>
+<h1 style="padding-left: 20px">Indy Motor Shop</h1><!--changed-->
+<hr>
+<br>
+<div class="container">
+    <label>User Name :</label>
+    <input type="text" name="username" placeholder="Username"/>
+    <label>Password :</label>
+    <input type="password" name="password" placeholder="password" id="password"/>
+    <input type="checkbox" onclick="myCheckbox()">
+    <input type="submit" value="Login" id="submit" onclick="validate()"/>
+</div>
+<script>
+    function myCheckbox()
+    {
+        var x = document.getElementById("password");
+        if(x.type === "password")
+        {
+            x.type = "text";
+        }
+        else{
+            x.type = "password";
+        }
+    }
+
+    function validate()
+    {
+        var pass = document.getElementById("password");
+        if(pass.value === "ajo#123")
+        {
+            alert("Login Successfully");
+            window.location.replace("contentPage.html");
+
+        }
+        else
+        {
+            alert("Login Failed");
+        }
+
+    }
+</script>
+
+</body>
+</html>
