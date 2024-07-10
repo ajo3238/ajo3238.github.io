@@ -17,8 +17,8 @@
 
 <div class="container">
     <h1>Indy Motor Shop</h1>
-    <a th:href="@{/aboutscreen}" class="btn btn-primary btn-sm mb-3">About page</a>
-    <a th:href="@{/logout}" class="btn btn-primary btn-sm mb-3">Logout</a>
+    <a th:href="@{/aboutscreen.html}" class="btn btn-primary btn-sm mb-3">About page</a>
+    <a th:href="@{/logout.html}" class="btn btn-primary btn-sm mb-3">Logout</a>
     <hr>
     <h2>Parts</h2>
     <form th:action="@{/contentPage.html}">
@@ -62,7 +62,7 @@
     </form>
     <script type="text/javascript">
         function clearSearch() {
-            window.location = "[[@{/}]]";
+            window.location = "contentPage.html";
         }
     </script>
     <br><br>
